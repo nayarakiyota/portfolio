@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+
+      <!-- Servidores de Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ 
+    <!-- Fonte do Google - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <!-- Padrão de caracteres -->
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <!-- Meta Tags Essenciais -->
+    <!-- Meta Tags Essenciais -->
     <meta name = "author" content = "Nayara Kiyota">
     <meta name = "description" content = "Portfólio de Nayara Kiyota, desenvolvedora Full Stack especializada em criar experiências digitais incríveis. Conheça meus projetos e entre em contato.">
     <meta name = "robots" content = "index, follow">
@@ -12,21 +22,25 @@
     <!-- Favicon -->
      <link rel = "icon" type = "image/svg+xml" href = "./assets/img/favicon.svg">
 
+     <!-- Link para arquivo CSS -->
+    <link rel = "stylesheet" href = "./assets/css/styles.css">
+
+    <!-- Título da página -->
     <title>Portfólio da Nayara</title>
 </head>
 <body>
-     <!-- Navbar - Menu -->
+     <!-- Menu -->
     <header class = "flex menu_container"> 
         <article class = "menu_content">
             <div id = "titulo">
-                <a href = "#">Portfólio</a>
+                <a href = "index.html">Portfólio</a>
             </div>
 
             <nav>
                 <ul class = "flex menu_list">
-                    <li><a href = "#hero">Início</a></li>
-                    <li><a href = "#about">Sobre</a></li>
-                    <li><a href = "#contact">Contato</a></li>
+                    <li><a href = "index.html#hero">Início</a></li>
+                    <li><a href = "index.html#about">Sobre</a></li>
+                    <li><a href = "index.html#contact">Contato</a></li>
                 </ul>
             </nav>
         </article>
@@ -34,28 +48,22 @@
     </header>
 
     <!-- Área Principal da Página -->
-     <main>
-       <section id = "about" class = "about_container">
+       <main>
+        <section class="sucess_container">
+            <article class="sucess_content">
 
-             <figure class = "about_image">
-                <img 
-                    src = "./assets/img/sucess.svg"
-                    alt = "Imagem de um símbolo de verificado."
-                >
-            </figure> 
-        </section>
+                <figure class="sucess_icon">
+                    <img src="./assets/img/sucess.svg" alt="Ilustração de desenvolvedor trabalhando"
+                        class="sucess_icon float-animation">
+                </figure>
 
-        <section id = "hero" class = "hero_container">
+                <h1>E-mail enviado com Sucesso!</h1>
+                <h4>Obrigado por entrar em contato! <br /> Logo mais retornarei sua mensagem.</h4>
 
-            <article class = "hero_content">
-                <h1>E-mail enviado com sucesso!</h1>
-                <h3>Obrigado por entrar em contato!</h3>
-                <h3>Logo mais retornarei a sua mensagem.</h3>
-                <div class = "hero_buttons">
-                    <a href = "index.html" class = "botao"> Voltar para o Início</a>
-                </div>
+                <a class="botao" href="index.html">Voltar para o Início</a>
+
             </article>
-
+        </section>
      </main>
      <!-- Footer - Rodapé -->
     <footer>
