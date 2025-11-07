@@ -71,7 +71,7 @@
 
             <figure class = "hero_image">
                 <img 
-                    src = "./assets/img/dev_woman.svg"
+                    src = "./assets/img/naydevghibli-min.png"
                     alt = "Ilustração com uma mulher desenvolvedora escrevendo código."
                     class = "ilustracao float-animation"
 
@@ -83,40 +83,6 @@
         <!-- #about -->
         <section id = "about" class = "about_container">
 
-            <!-- Foto do perfil -->
-             <figure class = "about_image">
-                <img 
-                    src = "./assets/img/avatar_dev_woman.svg"
-                    alt = "Foto da pessoa desenvolvedora."
-                >
-            </figure>
-
-            <!-- Conteúdo do perfil -->
-            <article class = "about_content">
-
-                <h2>Sobre mim</h2>
-                <p>Sou formada em Análise e Desenvolvimento de Sistemas e atualmente estou me especializando em Desenvolvimento Full Stack com foco em Java pela Generation Brasil.</p>
-                <p>Minha primeira experiência profissional foi em vendas, onde desenvolvi habilidades essenciais de comunicação, escuta ativa e empatia, que hoje aplico na tecnologia, entendendo as reais necessidades e buscando entregar soluções úteis e seguras.</p>
-                <p>No Bootcamp tenho estudado tecnologias como Java, Spring Boot, HTML, CSS, JavaScript e bancos de dados relacionais, com o objetivo de construir sistemas sólidos, escaláveis e que realmente façam diferença.</p>
-                <p>Meu objetivo é atuar como desenvolvedora Full Stack, contribuindo com soluções inteligentes, código de qualidade e uma atitude colaborativa.</p>
-
-                <div class = "about_stats">
-                    <a href = "#" target = "_blank" class = "botao">Ver GitHub</a>
-
-                <div class="stats-wrapper"></div>
-                    <div class = "stat-item">
-                        <p class = "stat-number">100</p>
-                        <p class = "stat-label">Seguidores</p>
-                    </div>
-                    <div class = "stat-item">
-                        <p class = "stat-number">50</p>
-                        <p class = "stat-label">Repositórios</p>
-                    </div>
-                </div>
-
-                </div>
-            </article>
-            
         </section>
 
         <!-- #contact -->
@@ -144,7 +110,11 @@
             </article>
 
             <!-- Formulário -->
-            <form id = "formulario">
+            <form action = "https://formsubmit.co/5e2dfdc3f0140f2ea2ad068f8df6db68" method = "POST" id = "formulario">
+
+                <input type = "hidden" name = "_next" value = "http://127.0.0.1:5500/sucess.html">
+                <input type = "hidden" name = "_captcha" value = "false">
+
                 <label for = "nome">Nome</label>
                 <input id = "nome" name = "nome" type = "text" placeholder = "Digite o seu nome completo">
                 <span id = "txtNome"></span>
@@ -170,5 +140,10 @@
     <footer>
         Feito com ❤️ por Nayara Kiyota - 2025
     </footer>
+
+    <!-- Script JavaScript -->
+        <script src = "./assets/js/scripts.js"></script>
+
 </body>
+
 </html>

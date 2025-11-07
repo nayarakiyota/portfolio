@@ -11,28 +11,52 @@
 /* === VARIÁVEIS === */
 :root {
     /* Cores */
-    --purple-50:  #f4eaff; 
-    --purple-100: #e9dcfa; 
-    --purple-200: #cdb3f0; 
-    --purple-300: #b186e5; 
-    --purple-400: #9460db; 
+    --purple-50:  #ede9fe; 
+    --purple-100: #ddd6fe; 
+    --purple-200: #c4b5fd; 
+    --purple-300: #a78bfa; 
+    --purple-400: #8b5cf6; 
     --purple-500: #6b36c8; 
     --purple-600: #5b2ca0; 
     --purple-700: #4c2177; 
-    --purple-800: #441f88; 
+    --purple-800: #3b0764; 
     --purple-900: #2a0e4d; 
-    --gray-100: #f5f5f5;
-    --gray-200: #e8e8e8;
-    --gray-400: #505861;
-    --black-800: #171717;
+
+    --blue-50:  #eff6ff;
+    --blue-100: #dbeafe;
+    --blue-200: #bfdbfe;
+    --blue-300: #93c5fd;
+    --blue-400: #60a5fa;
+    --blue-500: #3b82f6;
+    --blue-600: #2563eb;
+    --blue-700: #1e3a8a;
+    --blue-800: #1e40af;
+    --blue-900: #172554;
+
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+
+    --black-800: #0f0f13;
     --white: #ffffff;
     --error: #e63946;
- 
+
+    /* Gradiente base */
+    --gradient-dark: linear-gradient(180deg, #0f0f13 0%, #1a1628 100%);
+    --gradient-text: linear-gradient(90deg, #6b36c8, #3b82f6);
+    --bg-fallback: #0f0f13;
+
     /* Sombras */
-    --shadow-sm: 0 0.25rem 0.5rem #0000000D;
-    --shadow-md: 0 0.25rem 0.75rem #6B36C84D;
-    --shadow-lg: 0 0.5rem 1.5rem #6B36C833;
-    --shadow-focus: 0 0 0 0.25rem #6B36C81A;
+    --shadow-sm: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
+    --shadow-md: 0 0.25rem 0.75rem rgba(59, 130, 246, 0.25); /* leve tom azul */
+    --shadow-lg: 0 0.5rem 1.5rem rgba(107, 54, 200, 0.25); /* roxo suave */
+    --shadow-focus: 0 0 0 0.25rem rgba(107, 54, 200, 0.15);
 }
 
 /* Estilos Globais */
@@ -45,8 +69,8 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: var(--white);
-    color: var(--black-800);
+    background: var(--gradient-dark);
+    color: var(--gray-100);
 }
 
 main{
@@ -72,12 +96,12 @@ button{
 
 .botao{
     border: none;
-    color: var(--white);
+    color: var(--gray-300);
     background-color: var(--purple-500);
 }
 
 .botao:hover{
-    background-color: var(--purple-800);
+    background-color: var(--blue-500);
     box-shadow: var(--shadow-md);
     transform: translateY(-0.25rem);
 }
@@ -89,8 +113,8 @@ button{
 }
 
 .botao-outline:hover{
-    background-color: var(--purple-500);
-    color: var(--white);
+    background-color: var(--blue-500);
+    color: var(--gray-300);
     box-shadow: var(--shadow-md);
     transform: translateY(-0.25rem);
 }
@@ -102,8 +126,8 @@ button{
     top: 0;
     width: 100%;
     height: 5rem;
-    background-color: var(--purple-800);
-    border-bottom: 0.5rem solid var(--gray-200);
+    background: linear-gradient(90deg, #172554, #2a0e4d);
+    border-bottom: 0.5rem solid black;
     box-shadow: var(--shadow-sm);
     z-index: 1000;
 }
@@ -120,13 +144,13 @@ button{
 
 .menu_container a{
     font-weight: 600;
-    color: var(--white);
+    color: var(--gray-300);
     transition: color 0.3s ease;
 
 }
 
 .menu_container a:hover{
-    color: var(--purple-200);
+    color: var(--blue-400);
 }
 
 #titulo a{
@@ -173,20 +197,20 @@ button{
 .hero_content h4{
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--purple-500);
+    color: var(--purple-400);
 }
 
 .hero_content h1{
     font-size: 3rem;
     font-weight: 700;
     line-height: 3.5rem;
-    color: var(--black-800);
+    color: var(--grey-200);
 }
 
 .hero_content p{
     font-size: 1.25rem;
     line-height: 1.75rem;
-    color: var(--gray-400);
+    color: var(--gray-300);
 }
 
 .hero_buttons {
@@ -231,7 +255,7 @@ button{
     display: flex;
     align-items: center;
     gap: 4rem;
-    background-color: var(--gray-200);
+    background-color: var(--purple-100);
     border-radius: 1rem;
 }
 
@@ -256,7 +280,7 @@ button{
 .about_content p{
     font-size: 1.25rem;
     line-height: 1.75;
-    color: var(--gray-400);
+    color: var(--gray-800);
     margin-bottom: 1rem;
 }
 
@@ -286,13 +310,13 @@ button{
     font-size: 1.5rem;
     font-weight: 700;
     text-align: center;
-    color: var(--purple-500);
+    color: var(--purple-600);
     margin-bottom: 0;
 }
 
 .stats-wrapper .stat-label {
-    font-size: 0.75rem;
-    color: var(--gray-400);
+    font-size: 0.9rem;
+    color: var(--gray-500);
     text-align: center;
     margin-bottom: 0;
 }
@@ -310,13 +334,13 @@ button{
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
-    color: var(--purple-500);
+    color: var(--purple-400);
 }
 
 .contact_info p{
     font-size: 1.25rem;
     line-height: 1.75rem;
-    color: var(--gray-400);
+    color: var(--gray-300);
     margin-bottom: 2rem;
 }
 
@@ -329,7 +353,7 @@ button{
     width: 4rem;
     height: 4rem;
     padding: 0.75rem;
-    background-color: var(--gray-100);
+    background-color: var(--gray-300);
     border-radius: 0.5rem;
     transition: all 0.3s ease;
 }
@@ -358,9 +382,9 @@ form{
 }
 
 form label{
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 600;
-    color: var(--black-800);
+    color: var(--gray-300);
 }
 
 form input,
@@ -370,7 +394,7 @@ textarea{
     border-radius: 0.5rem;
     border: 0.25rem solid var(--gray-200);
     font-size: 1rem;
-    background-color: var(--white);
+    background-color: var(--gray-300);
     transition: border-color 0.3s ease;
 }
 
@@ -415,9 +439,9 @@ form span{
 }
 
 .sucess_icon {
-    width: 7.5rem;
-    height: 7.5rem;
-    background-color: var(--purple-100);
+    width: 9rem;
+    height: 9rem;
+    background-color: var(--purple-200);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -444,12 +468,12 @@ form span{
 .sucess_content h1 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--purple-800);
+    color: var(--purple-400);
 }
 
 .sucess_content h4 {
     font-size: 1.25rem;
-    color: var(--gray-400);
+    color: var(--gray-300);
     line-height: 1.875rem;
 }
 
@@ -459,7 +483,7 @@ footer{
     padding: 2.5rem;
     font-weight: 600;
     text-align: center;
-    background: linear-gradient(to right top, var(--purple-500), var(--purple-800));
+    background: linear-gradient(90deg, #172554, #2a0e4d);
     color: var(--white);
     margin-top: auto;
 }
